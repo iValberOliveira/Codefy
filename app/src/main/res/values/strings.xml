@@ -18,4 +18,6 @@
 
     <string name="placeholder_search_input">Pesquisar</string>
     <string name="title_lastest_podcast">Recentes</string>
+    <string name="txt.now_playing">Now Playing</string>
+    <string name="txt.podcast_title">Maycodes ep.38</string>
 </resources>

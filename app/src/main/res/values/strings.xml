@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">codefy</string>
+    <string name="app_name">Codefy</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -16,4 +16,5 @@
     <string name="txt_podcast_description">O codefy é um podcast elaborado com temas sobre o curso de Engenharia de Software.</string>
     <string name="placeholder_search_input">Pesquisar</string>
 
+    <string name="title_lastest_podcast">Recentes</string>
 </resources>

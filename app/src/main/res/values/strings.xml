@@ -14,5 +14,6 @@
 
     <string name="txt_button_entrar">Entrar</string>
     <string name="txt_podcast_description">O codefy é um podcast elaborado com temas sobre o curso de Engenharia de Software.</string>
+    <string name="placeholder_search_input">Pesquisar</string>
 
 </resources>

@@ -24,7 +24,11 @@
         android:id="@+id/homeFragment"
         android:name="com.example.codefy.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_FirstFragment2"
+            app:destination="@id/FirstFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fourthFragment"
         android:name="com.example.codefy.FourthFragment"

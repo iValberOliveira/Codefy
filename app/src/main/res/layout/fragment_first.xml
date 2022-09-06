@@ -8,9 +8,13 @@
     tools:context=".FirstFragment">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -43,18 +47,63 @@
                 android:src="@drawable/icone_sino" />
         </LinearLayout>
 
-        <EditText
-            android:id="@+id/edt_search_input"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:background="#252836"
-            android:ems="10"
-            android:hint="@string/placeholder_search_input"
-            android:inputType="textPersonName"
-            android:minHeight="50dp"
-            android:paddingLeft="20dp"
-            android:textColorHint="#D5D5D5" />
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edt_search_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:autofillHints=""
+                android:background="#252836"
+                android:ems="10"
+                android:hint="@string/placeholder_search_input"
+                android:inputType="textPersonName"
+                android:minHeight="50dp"
+                android:paddingLeft="20dp"
+                android:textColorHint="#D5D5D5" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:paddingLeft="20dp"
+                android:paddingTop="20dp"
+                android:text="@string/title_lastest_podcast"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="horizontal">
+
+                <GridView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:horizontalSpacing="5dp"
+                    android:numColumns="2"
+                    android:scrollbarAlwaysDrawVerticalTrack="true"
+                    android:scrollbars="horizontal"
+                    android:stretchMode="columnWidth" />
+
+            </LinearLayout>
+        </LinearLayout>
+
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

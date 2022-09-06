@@ -14,11 +14,15 @@ import com.example.codefy.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.GridView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
+    GridView listPodcastView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,19 +31,16 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        listPodcastView = findViewById(R.id.features_podcast_grid);
+
+        ArrayList<Podcast> PodcastList = new ArrayList<Podcast>();
+        PodcastList.add(new Podcast( "Maycon Software", "Teste", "teste"));
+        PodcastList.add(new Podcast( "Maycon Software", "Teste", "teste"));
+        PodcastList.add(new Podcast( "Maycon Software", "Teste", "teste"));
 
 
-//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-//        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-//        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-
-//        binding.fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
+        PodcastAdapter adapter = new PodcastAdapter(this, PodcastList);
+        listPodcastView.setAdapter(adapter);
     }
 
 

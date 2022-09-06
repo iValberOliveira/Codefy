@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Codefy</string>
+    <string name="app_name">codefy</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -11,4 +11,8 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="txt_button_entrar">Entrar</string>
+    <string name="txt_podcast_description">O codefy é um podcast elaborado com temas sobre o curso de Engenharia de Software.</string>
+
 </resources>

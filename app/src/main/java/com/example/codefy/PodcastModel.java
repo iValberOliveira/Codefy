@@ -1,12 +1,11 @@
 package com.example.codefy;
 
-public class Podcast {
+public class PodcastModel {
     private String podcast_title;
     private String podcast_author;
     private String podcast_cover;
-    private int position;
 
-    public Podcast(String podcast_author, String podcast_title, String podcast_cover) {
+    public PodcastModel(String podcast_author, String podcast_title, String podcast_cover) {
         this.podcast_author = podcast_author;
         this.podcast_title = podcast_title;
         this.podcast_cover = podcast_cover;

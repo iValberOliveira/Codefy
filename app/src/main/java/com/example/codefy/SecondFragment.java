@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.widget.TextView;
 
 import androidx.navigation.fragment.NavHostFragment;
 
@@ -29,6 +30,10 @@ public class SecondFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        TextView tv = view.findViewById(R.id.textView5);
+        tv.setText(getArguments().getString("position"));
+
 
         /*binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
             @Override

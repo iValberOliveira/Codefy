@@ -39,9 +39,8 @@ public class FirstFragment extends Fragment {
 
 
         ArrayList<PodcastModel> podcastModelList = new ArrayList<PodcastModel>();
-        podcastModelList.add(0, new PodcastModel( "Maycon Software", "Teste", "teste"));
-        podcastModelList.add(1, new PodcastModel( "Maycon Software", "Teste", "teste"));
-        podcastModelList.add(2, new PodcastModel( "Maycon Software", "Teste", "teste"));
+        podcastModelList.add(0, new PodcastModel( "Maycon Software", "Maycodes ep.38", "teste"));
+        podcastModelList.add(1, new PodcastModel( "Universidade dos dados", "Não teste seu código!", "teste"));
 
         PodcastAdapter adapter = new PodcastAdapter(this.getContext(), podcastModelList);
         binding.featuresPodcastGrid.setAdapter(adapter);
@@ -51,7 +50,7 @@ public class FirstFragment extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
                 Bundle bundle = new Bundle();
-                bundle.putString("position", i);
+                bundle.putString("position", String.valueOf(i));
                 NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_SecondFragment, bundle);
             }
         });

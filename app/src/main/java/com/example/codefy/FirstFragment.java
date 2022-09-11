@@ -38,9 +38,11 @@ public class FirstFragment extends Fragment {
 
 
 
+
         ArrayList<PodcastModel> podcastModelList = new ArrayList<PodcastModel>();
-        podcastModelList.add(0, new PodcastModel( "Maycon Software", "Maycodes ep.38", "teste"));
-        podcastModelList.add(1, new PodcastModel( "Universidade dos dados", "Não teste seu código!", "teste"));
+        podcastModelList.add(0, new PodcastModel( "Fronteiras da Engenharia de Software", "26. Contribuição em Projetos de Código Aberto (PARTE 1), com Igor Steinmacher ", R.drawable.ep26, "https://anchor.fm/s/248c0568/podcast/play/53541872/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2022-5-15%2F07e2207f-9fc2-badb-0735-2d27199e1551.mp3"));
+        podcastModelList.add(1, new PodcastModel( "Fronteiras da Engenharia de Software", "25. Estudos Secundários em Engenharia de Software, com Katia Felizardo (UTFPR)", R.drawable.ep25, "https://anchor.fm/s/248c0568/podcast/play/53541872/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2022-5-15%2F07e2207f-9fc2-badb-0735-2d27199e1551.mp3"));
+        podcastModelList.add(2, new PodcastModel( "Fronteiras da Engenharia de Software", "24. Engenharia de Requisitos, com Marcos Kalinowski (PUC-Rio)", R.drawable.ep24, "https://anchor.fm/s/248c0568/podcast/play/53541872/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2022-5-15%2F07e2207f-9fc2-badb-0735-2d27199e1551.mp3"));
 
         PodcastAdapter adapter = new PodcastAdapter(this.getContext(), podcastModelList);
         binding.featuresPodcastGrid.setAdapter(adapter);
@@ -48,12 +50,16 @@ public class FirstFragment extends Fragment {
         binding.featuresPodcastGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-                Bundle bundle = new Bundle();
-                bundle.putString("position", String.valueOf(i));
-                NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_SecondFragment, bundle);
+                PodcastModel podcastSelected = adapter.getItem(i);
+                Bundle b = new Bundle();
+                b.putString("podcast_title_selected", podcastSelected.getPodcast_title());
+                b.putString("podcast_author_selected", podcastSelected.getPodcast_author());
+                b.putInt("podcast_cover_selected", podcastSelected.getPodcast_cover());
+                b.putString("podcast_audio_path_selected", podcastSelected.getPodcast_audio_path());
+                NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_SecondFragment, b);
             }
         });
+
 
     }
 

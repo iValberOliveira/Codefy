@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1F1D2B"
-    tools:context=".FirstFragment"
-    android:textColor="#FFFFFF">
+    tools:context=".FirstFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -90,17 +89,17 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <GridView
                     android:id="@+id/features_podcast_grid"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textColor="#FFFFFF"
                     android:horizontalSpacing="6dp"
                     android:numColumns="2"
-                    android:verticalSpacing="6dp" />
+                    android:paddingLeft="20dp" />
 
             </LinearLayout>
         </LinearLayout>

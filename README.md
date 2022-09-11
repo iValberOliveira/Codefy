@@ -1,6 +1,6 @@
 # codefy
 ## _Um podcast para engenheiros de softwares brasileiros_
-<img src="https://i.imgur.com/EUIbgXG.png" height="200px" style="justify-items: center"/>
+<img src="https://i.imgur.com/EUIbgXG.png" height="350px" style="justify-items: center"/>
 <hr>
 
 ### Descrição 

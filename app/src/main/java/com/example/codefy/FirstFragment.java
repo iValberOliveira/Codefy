@@ -21,6 +21,7 @@ public class FirstFragment extends Fragment {
     private FragmentFirstBinding binding;
     private GridView podcastGridView;
     private PodcastAdapter podcastAdapter;
+    private PodcastModel podcastSelected;
 
     @Override
     public View onCreateView(
@@ -35,7 +36,6 @@ public class FirstFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
 
 
 
@@ -59,7 +59,6 @@ public class FirstFragment extends Fragment {
                 NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_SecondFragment, b);
             }
         });
-
 
     }
 

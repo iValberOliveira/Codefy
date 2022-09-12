@@ -16,8 +16,8 @@ public class PodcastAdapter extends BaseAdapter {
     private List<PodcastModel> podcasts;
     private LayoutInflater mInflater;
     public PodcastAdapter(Context context, List<PodcastModel> PodcastModelList){
-        this.podcasts = PodcastModelList;
-        mInflater = LayoutInflater.from(context);
+    this.podcasts = PodcastModelList;
+    mInflater = LayoutInflater.from(context);
     }
 
 
